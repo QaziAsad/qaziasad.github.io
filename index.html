@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/drake.css?v=29">
+  <link rel="stylesheet" href="css/drake.css?v=31">
 </head>
 <body>
   <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
@@ -200,64 +200,14 @@
 
     <section class="section" id="skills">
       <p class="badge" data-anim="up"><i class="fa fa-star-o"></i> My Skills</p>
-      <h2 class="display" data-anim="up">My <span class="accent">stack</span></h2>
-      <p class="stack-lead" data-anim="up">The tools I use to design, build, and help a website get found.</p>
-      <div class="stack-filters" data-anim="up" role="tablist" aria-label="Skill categories">
-        <button type="button" data-filter="all" class="active" aria-pressed="true">All</button>
-        <button type="button" data-filter="frontend" aria-pressed="false">Frontend</button>
-        <button type="button" data-filter="backend" aria-pressed="false">Backend</button>
-        <button type="button" data-filter="seo" aria-pressed="false">SEO</button>
-        <button type="button" data-filter="tools" aria-pressed="false">Tools</button>
-      </div>
-      <div class="stack-groups" data-anim="up">
-        <div class="stack-group" data-group="frontend">
-          <div>
-            <h3>Frontend</h3>
-            <p class="count">8 technologies</p>
-          </div>
-          <div class="stack-chips">
-            <span><i class="mark">HTML</i> HTML</span>
-            <span><i class="mark">CSS</i> CSS</span>
-            <span><i class="mark">JS</i> JavaScript</span>
-            <span><i class="mark">Re</i> React</span>
-            <span><i class="mark">RR</i> React Router</span>
-            <span><i class="mark">Tw</i> Tailwind CSS</span>
-            <span><i class="mark">Bs</i> Bootstrap</span>
-            <span><i class="mark">MUI</i> MUI</span>
-          </div>
-        </div>
-        <div class="stack-group" data-group="backend">
-          <div>
-            <h3>Backend</h3>
-            <p class="count">2 technologies</p>
-          </div>
-          <div class="stack-chips">
-            <span><i class="mark">PHP</i> PHP</span>
-            <span><i class="mark">SQL</i> MySQL</span>
-          </div>
-        </div>
-        <div class="stack-group" data-group="seo">
-          <div>
-            <h3>SEO</h3>
-            <p class="count">3 focuses</p>
-          </div>
-          <div class="stack-chips">
-            <span><i class="mark">T</i> Technical SEO</span>
-            <span><i class="mark">On</i> On-page SEO</span>
-            <span><i class="mark">Bk</i> Backlinks</span>
-          </div>
-        </div>
-        <div class="stack-group" data-group="tools">
-          <div>
-            <h3>Tools</h3>
-            <p class="count">3 technologies</p>
-          </div>
-          <div class="stack-chips">
-            <span><i class="mark">Git</i> Git</span>
-            <span><i class="mark">Rd</i> Redux</span>
-            <span><i class="mark">Rx</i> RxJS</span>
-          </div>
-        </div>
+      <h2 class="display" data-anim="up">My <span class="accent">Advantages</span></h2>
+      <div class="skill-grid">
+        <div class="skill" data-anim="left"><div class="bubble"><i class="fa fa-code"></i><strong>90%</strong></div><p>HTML &amp; CSS</p></div>
+        <div class="skill" data-anim="up" data-delay="80"><div class="bubble"><i class="fa fa-code"></i><strong>85%</strong></div><p>JavaScript &amp; React</p></div>
+        <div class="skill" data-anim="up" data-delay="140"><div class="bubble"><i class="fa fa-database"></i><strong>88%</strong></div><p>PHP &amp; MySQL</p></div>
+        <div class="skill" data-anim="right" data-delay="180"><div class="bubble"><i class="fa fa-line-chart"></i><strong>86%</strong></div><p>SEO</p></div>
+        <div class="skill" data-anim="left" data-delay="80"><div class="bubble"><i class="fa fa-css3"></i><strong>80%</strong></div><p>Tailwind &amp; MUI</p></div>
+        <div class="skill" data-anim="up" data-delay="140"><div class="bubble"><i class="fa fa-git"></i><strong>78%</strong></div><p>Git &amp; Agile</p></div>
       </div>
     </section>
 
@@ -265,29 +215,59 @@
       <p class="badge" data-anim="up"><i class="fa fa-briefcase"></i> Portfolio</p>
       <h2 class="display" data-anim="up">Featured <span class="accent">Projects</span></h2>
       <div class="project-grid">
-        <article class="project project-wide" data-anim="up">
-          <div class="project-visual v1"><strong>NinjaVapes</strong><ul class="tags"><li>PHP</li><li>MySQL</li><li>SEO</li></ul></div>
-          <h3>NinjaVapes — UK e-commerce</h3>
+        <article class="project project-wide" data-anim="up" data-cursor="View">
+          <div class="project-visual v1">
+            <span class="project-index"><b>01</b><i aria-hidden="true">&rarr;</i></span>
+            <strong>NinjaVapes</strong>
+            <ul class="tags"><li>PHP</li><li>MySQL</li><li>SEO</li></ul>
+            <span class="project-line"></span>
+          </div>
+          <h3><span>NinjaVapes — UK e-commerce</span><span class="fill" aria-hidden="true">NinjaVapes — UK e-commerce</span></h3>
         </article>
-        <article class="project" data-anim="up">
-          <div class="project-visual v2"><strong>VapeSuite</strong><ul class="tags"><li>PHP</li><li>SEO</li></ul></div>
-          <h3>VapeSuite — UK store</h3>
+        <article class="project" data-anim="up" data-cursor="View">
+          <div class="project-visual v2">
+            <span class="project-index"><b>02</b><i aria-hidden="true">&rarr;</i></span>
+            <strong>VapeSuite</strong>
+            <ul class="tags"><li>PHP</li><li>SEO</li></ul>
+            <span class="project-line"></span>
+          </div>
+          <h3><span>VapeSuite — UK store</span><span class="fill" aria-hidden="true">VapeSuite — UK store</span></h3>
         </article>
-        <article class="project" data-anim="up" data-delay="120">
-          <div class="project-visual v3"><strong>Hidden Hills</strong><ul class="tags"><li>PHP</li><li>Booking</li></ul></div>
-          <h3>Hidden Hills Hotel</h3>
+        <article class="project" data-anim="up" data-delay="120" data-cursor="View">
+          <div class="project-visual v3">
+            <span class="project-index"><b>03</b><i aria-hidden="true">&rarr;</i></span>
+            <strong>Hidden Hills</strong>
+            <ul class="tags"><li>PHP</li><li>Booking</li></ul>
+            <span class="project-line"></span>
+          </div>
+          <h3><span>Hidden Hills Hotel</span><span class="fill" aria-hidden="true">Hidden Hills Hotel</span></h3>
         </article>
-        <article class="project" data-anim="up">
-          <div class="project-visual v4"><strong>KDIC</strong><ul class="tags"><li>PHP</li><li>Frontend</li></ul></div>
-          <h3>KDIC Islamabad</h3>
+        <article class="project" data-anim="up" data-cursor="View">
+          <div class="project-visual v4">
+            <span class="project-index"><b>04</b><i aria-hidden="true">&rarr;</i></span>
+            <strong>KDIC</strong>
+            <ul class="tags"><li>PHP</li><li>Frontend</li></ul>
+            <span class="project-line"></span>
+          </div>
+          <h3><span>KDIC Islamabad</span><span class="fill" aria-hidden="true">KDIC Islamabad</span></h3>
         </article>
-        <article class="project" data-anim="up" data-delay="120">
-          <div class="project-visual v5"><strong>Epoxy</strong><ul class="tags"><li>PHP</li><li>MySQL</li></ul></div>
-          <h3>Epoxy Resin — UK shop</h3>
+        <article class="project" data-anim="up" data-delay="120" data-cursor="View">
+          <div class="project-visual v5">
+            <span class="project-index"><b>05</b><i aria-hidden="true">&rarr;</i></span>
+            <strong>Epoxy</strong>
+            <ul class="tags"><li>PHP</li><li>MySQL</li></ul>
+            <span class="project-line"></span>
+          </div>
+          <h3><span>Epoxy Resin — UK shop</span><span class="fill" aria-hidden="true">Epoxy Resin — UK shop</span></h3>
         </article>
-        <article class="project project-wide" data-anim="up">
-          <div class="project-visual v6"><strong>JustVape365</strong><ul class="tags"><li>E-commerce</li><li>SEO</li></ul></div>
-          <h3>JustVape365 — ongoing SEO</h3>
+        <article class="project project-wide" data-anim="up" data-cursor="View">
+          <div class="project-visual v6">
+            <span class="project-index"><b>06</b><i aria-hidden="true">&rarr;</i></span>
+            <strong>JustVape365</strong>
+            <ul class="tags"><li>E-commerce</li><li>SEO</li></ul>
+            <span class="project-line"></span>
+          </div>
+          <h3><span>JustVape365 — ongoing SEO</span><span class="fill" aria-hidden="true">JustVape365 — ongoing SEO</span></h3>
         </article>
       </div>
     </section>
@@ -404,6 +384,6 @@
 
   <button class="to-top" id="toTop" type="button" aria-label="Back to top" hidden><i class="fa fa-angle-up"></i></button>
 
-  <script src="js/drake.js?v=5"></script>
+  <script src="js/drake.js?v=7"></script>
 </body>
 </html>

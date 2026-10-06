@@ -86,22 +86,6 @@
     sections.forEach(function (section) { spy.observe(section); });
   }
 
-  var filters = document.querySelectorAll(".stack-filters button");
-  var groups = document.querySelectorAll(".stack-group");
-  filters.forEach(function (button) {
-    button.addEventListener("click", function () {
-      var key = button.getAttribute("data-filter");
-      filters.forEach(function (item) {
-        var on = item === button;
-        item.classList.toggle("active", on);
-        item.setAttribute("aria-pressed", on ? "true" : "false");
-      });
-      groups.forEach(function (group) {
-        group.hidden = key !== "all" && group.getAttribute("data-group") !== key;
-      });
-    });
-  });
-
   var copyMail = document.getElementById("copyMail");
   if (copyMail) {
     copyMail.addEventListener("click", function () {
@@ -148,4 +132,64 @@
     ].join("\n");
     window.location.href = "mailto:qaziasad17@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
   });
+
+  var finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  if (finePointer && motionOk) {
+    var dot = document.createElement("div");
+    var ring = document.createElement("div");
+    var label = document.createElement("span");
+    dot.className = "cursor-dot";
+    ring.className = "cursor-ring";
+    ring.appendChild(label);
+    document.body.appendChild(dot);
+    document.body.appendChild(ring);
+    document.body.classList.add("has-cursor");
+
+    var x = -100;
+    var y = -100;
+    var rx = -100;
+    var ry = -100;
+    var scale = 1;
+    var target = 1;
+
+    document.addEventListener("mousemove", function (event) {
+      x = event.clientX;
+      y = event.clientY;
+      document.body.classList.add("cursor-on");
+      dot.style.transform = "translate(" + x + "px," + y + "px) translate(-50%, -50%)";
+    });
+
+    document.documentElement.addEventListener("mouseleave", function () {
+      document.body.classList.remove("cursor-on");
+    });
+
+    document.addEventListener("mouseover", function (event) {
+      var project = event.target.closest("[data-cursor]");
+      var hot = event.target.closest("a, button, .service-row, .price");
+      if (project) {
+        document.body.classList.add("cursor-view");
+        document.body.classList.remove("cursor-hot");
+        label.textContent = project.getAttribute("data-cursor") || "";
+        target = 2.15;
+      } else if (hot) {
+        document.body.classList.remove("cursor-view");
+        document.body.classList.add("cursor-hot");
+        label.textContent = "";
+        target = 1.55;
+      } else {
+        document.body.classList.remove("cursor-view", "cursor-hot");
+        label.textContent = "";
+        target = 1;
+      }
+    });
+
+    function follow() {
+      rx += (x - rx) * 0.18;
+      ry += (y - ry) * 0.18;
+      scale += (target - scale) * 0.18;
+      ring.style.transform = "translate(" + rx + "px," + ry + "px) translate(-50%, -50%) scale(" + scale + ")";
+      window.requestAnimationFrame(follow);
+    }
+    follow();
+  }
 })();
