@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/drake.css?v=27">
+  <link rel="stylesheet" href="css/drake.css?v=29">
 </head>
 <body>
   <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
@@ -86,6 +86,10 @@
       <p class="badge"><i class="fa fa-home"></i> Introduce</p>
       <h2>Hey, I’m <span class="accent">Qazi Asad Ullah</span><br>I Turn Ideas Into Digital Experiences</h2>
       <p class="lead">I build complete websites from the database to the screen, and I handle the SEO that helps them get found. Just simple like that.</p>
+      <div class="hero-actions">
+        <a class="solid" href="#portfolio">Projects</a>
+        <a class="ghost" href="#contact">Contact</a>
+      </div>
       <div class="hero-row">
         <div class="stats">
           <div>
@@ -122,24 +126,28 @@
       <h2 class="display" data-anim="up">Education &amp; <span class="accent">Experience</span></h2>
       <div class="timeline">
         <article class="job" data-anim="right">
+          <p class="kind">Work</p>
           <p class="when">May 2023 — Present</p>
           <h3>Full Stack Web Developer</h3>
           <p class="where">WebComforts.com</p>
           <p>I build and look after client websites end to end, including UK stores and the Hidden Hills booking site, plus technical SEO, audits, and maintenance.</p>
         </article>
         <article class="job" data-anim="right" data-delay="120">
+          <p class="kind">Work</p>
           <p class="when">February 2021 — March 2023</p>
           <h3>Frontend Developer</h3>
           <p class="where">It's Time Technology and Marketing</p>
           <p>Responsive interfaces with React, Tailwind CSS, React Router, Redux, and RxJS.</p>
         </article>
         <article class="job" data-anim="right" data-delay="200">
+          <p class="kind">Work</p>
           <p class="when">October 2020 — February 2021</p>
           <h3>Frontend Developer Intern</h3>
           <p class="where">Robotics World</p>
           <p>Responsive pages with HTML, CSS, and JavaScript on live frontend work.</p>
         </article>
         <article class="job" data-anim="right" data-delay="280">
+          <p class="kind">Education</p>
           <p class="when">October 2016 — August 2020</p>
           <h3>BS Software Engineering</h3>
           <p class="where">Abbottabad University of Science and Technology</p>
@@ -155,7 +163,11 @@
           <div>
             <h3>Frontend</h3>
             <p>Responsive interfaces with HTML, CSS, JavaScript, React, Tailwind CSS, Bootstrap, and MUI.</p>
-            <span>Frontend</span>
+            <ul class="points">
+              <li><b>01</b> HTML, CSS, and JavaScript</li>
+              <li><b>02</b> React, Tailwind, Bootstrap, and MUI</li>
+              <li><b>03</b> Layouts that stay clear on phone and desktop</li>
+            </ul>
           </div>
           <i class="fa fa-desktop"></i>
         </article>
@@ -163,7 +175,11 @@
           <div>
             <h3>Backend</h3>
             <p>Custom PHP, MySQL, database design, and CMS work, from a blank project to a live website.</p>
-            <span>Backend</span>
+            <ul class="points">
+              <li><b>01</b> Custom PHP and MySQL</li>
+              <li><b>02</b> Database design from a blank project</li>
+              <li><b>03</b> CMS work when the site needs it</li>
+            </ul>
           </div>
           <i class="fa fa-code"></i>
         </article>
@@ -171,7 +187,11 @@
           <div>
             <h3>SEO</h3>
             <p>Technical audits, on-page SEO, and backlink building so a finished site can earn search traffic.</p>
-            <span>Search and content</span>
+            <ul class="points">
+              <li><b>01</b> Technical audits</li>
+              <li><b>02</b> On-page SEO</li>
+              <li><b>03</b> Backlink building</li>
+            </ul>
           </div>
           <i class="fa fa-line-chart"></i>
         </article>
@@ -180,14 +200,64 @@
 
     <section class="section" id="skills">
       <p class="badge" data-anim="up"><i class="fa fa-star-o"></i> My Skills</p>
-      <h2 class="display" data-anim="up">My <span class="accent">Advantages</span></h2>
-      <div class="skill-grid">
-        <div class="skill" data-anim="left"><div class="bubble"><i class="fa fa-code"></i><strong>90%</strong></div><p>HTML &amp; CSS</p></div>
-        <div class="skill" data-anim="up" data-delay="80"><div class="bubble"><i class="fa fa-code"></i><strong>85%</strong></div><p>JavaScript &amp; React</p></div>
-        <div class="skill" data-anim="up" data-delay="140"><div class="bubble"><i class="fa fa-database"></i><strong>88%</strong></div><p>PHP &amp; MySQL</p></div>
-        <div class="skill" data-anim="right" data-delay="180"><div class="bubble"><i class="fa fa-line-chart"></i><strong>86%</strong></div><p>SEO</p></div>
-        <div class="skill" data-anim="left" data-delay="80"><div class="bubble"><i class="fa fa-css3"></i><strong>80%</strong></div><p>Tailwind &amp; MUI</p></div>
-        <div class="skill" data-anim="up" data-delay="140"><div class="bubble"><i class="fa fa-git"></i><strong>78%</strong></div><p>Git &amp; Agile</p></div>
+      <h2 class="display" data-anim="up">My <span class="accent">stack</span></h2>
+      <p class="stack-lead" data-anim="up">The tools I use to design, build, and help a website get found.</p>
+      <div class="stack-filters" data-anim="up" role="tablist" aria-label="Skill categories">
+        <button type="button" data-filter="all" class="active" aria-pressed="true">All</button>
+        <button type="button" data-filter="frontend" aria-pressed="false">Frontend</button>
+        <button type="button" data-filter="backend" aria-pressed="false">Backend</button>
+        <button type="button" data-filter="seo" aria-pressed="false">SEO</button>
+        <button type="button" data-filter="tools" aria-pressed="false">Tools</button>
+      </div>
+      <div class="stack-groups" data-anim="up">
+        <div class="stack-group" data-group="frontend">
+          <div>
+            <h3>Frontend</h3>
+            <p class="count">8 technologies</p>
+          </div>
+          <div class="stack-chips">
+            <span><i class="mark">HTML</i> HTML</span>
+            <span><i class="mark">CSS</i> CSS</span>
+            <span><i class="mark">JS</i> JavaScript</span>
+            <span><i class="mark">Re</i> React</span>
+            <span><i class="mark">RR</i> React Router</span>
+            <span><i class="mark">Tw</i> Tailwind CSS</span>
+            <span><i class="mark">Bs</i> Bootstrap</span>
+            <span><i class="mark">MUI</i> MUI</span>
+          </div>
+        </div>
+        <div class="stack-group" data-group="backend">
+          <div>
+            <h3>Backend</h3>
+            <p class="count">2 technologies</p>
+          </div>
+          <div class="stack-chips">
+            <span><i class="mark">PHP</i> PHP</span>
+            <span><i class="mark">SQL</i> MySQL</span>
+          </div>
+        </div>
+        <div class="stack-group" data-group="seo">
+          <div>
+            <h3>SEO</h3>
+            <p class="count">3 focuses</p>
+          </div>
+          <div class="stack-chips">
+            <span><i class="mark">T</i> Technical SEO</span>
+            <span><i class="mark">On</i> On-page SEO</span>
+            <span><i class="mark">Bk</i> Backlinks</span>
+          </div>
+        </div>
+        <div class="stack-group" data-group="tools">
+          <div>
+            <h3>Tools</h3>
+            <p class="count">3 technologies</p>
+          </div>
+          <div class="stack-chips">
+            <span><i class="mark">Git</i> Git</span>
+            <span><i class="mark">Rd</i> Redux</span>
+            <span><i class="mark">Rx</i> RxJS</span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -295,7 +365,10 @@
     <section class="section" id="contact">
       <p class="badge" data-anim="up"><i class="fa fa-envelope-o"></i> Contact</p>
       <h2 class="display" data-anim="up">Let's Work <span class="accent">Together!</span></h2>
-      <a class="plain-mail" data-anim="up" href="mailto:qaziasad17@gmail.com">qaziasad17@gmail.com</a>
+      <div class="mail-row" data-anim="up">
+        <a class="plain-mail" href="mailto:qaziasad17@gmail.com">qaziasad17@gmail.com</a>
+        <button class="copy-mail" id="copyMail" type="button">Copy</button>
+      </div>
       <form id="contactForm" class="form-grid" data-anim="up">
         <div class="field">
           <label for="full-name">Full name <em>*</em></label>
@@ -329,6 +402,8 @@
     </section>
   </main>
 
-  <script src="js/drake.js?v=4"></script>
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top" hidden><i class="fa fa-angle-up"></i></button>
+
+  <script src="js/drake.js?v=5"></script>
 </body>
 </html>

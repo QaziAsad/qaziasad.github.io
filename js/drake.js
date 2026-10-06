@@ -86,6 +86,54 @@
     sections.forEach(function (section) { spy.observe(section); });
   }
 
+  var filters = document.querySelectorAll(".stack-filters button");
+  var groups = document.querySelectorAll(".stack-group");
+  filters.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var key = button.getAttribute("data-filter");
+      filters.forEach(function (item) {
+        var on = item === button;
+        item.classList.toggle("active", on);
+        item.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+      groups.forEach(function (group) {
+        group.hidden = key !== "all" && group.getAttribute("data-group") !== key;
+      });
+    });
+  });
+
+  var copyMail = document.getElementById("copyMail");
+  if (copyMail) {
+    copyMail.addEventListener("click", function () {
+      var email = "qaziasad17@gmail.com";
+      function markCopied() {
+        copyMail.textContent = "Copied";
+        copyMail.classList.add("done");
+        window.setTimeout(function () {
+          copyMail.textContent = "Copy";
+          copyMail.classList.remove("done");
+        }, 1600);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(markCopied).catch(markCopied);
+      } else {
+        markCopied();
+      }
+    });
+  }
+
+  var toTop = document.getElementById("toTop");
+  if (toTop) {
+    function toggleTop() {
+      toTop.hidden = window.scrollY < 480;
+    }
+    window.addEventListener("scroll", toggleTop, { passive: true });
+    toggleTop();
+    toTop.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: motionOk ? "smooth" : "auto" });
+    });
+  }
+
   var form = document.getElementById("contactForm");
   form.addEventListener("submit", function (event) {
     event.preventDefault();
